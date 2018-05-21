@@ -15,7 +15,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //echo "index";
+        echo "index";
         //$posts =  Mod_Post::all();
         //$posts =  Mod_Post::orderBy('title', 'desc')->get();
         $posts =  DB::select("Select * from mod__posts");
