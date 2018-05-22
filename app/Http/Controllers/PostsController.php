@@ -16,9 +16,11 @@ class PostsController extends Controller
     public function index()
     {
         echo "index";
+        $obj = new Mod_Post();
         //$posts =  Mod_Post::all();
         //$posts =  Mod_Post::orderBy('title', 'desc')->get();
-        $posts =  DB::select("Select * from mod__posts");
+        //$posts =  DB::select("Select * from mod__posts");
+        $posts = $obj->get_all_posts();
         //$posts = $posts->toArray();
         //echo"<pre/>";print_r($posts); exit;
         return view('posts.index')->with('posts', $posts);
